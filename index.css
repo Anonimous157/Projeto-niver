@@ -1,0 +1,120 @@
+.caacupe-one-regular {
+  font-family: "Caacupe One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+
+body{
+  
+  opacity:90%;
+  background-color:hwb(197 53% 8% / 0.8392156862745098);
+}
+
+#tela_data{
+  display:block;
+}
+
+.texto1{
+  position:absolute;
+  left:50%;
+  top:20%;
+  transform:translate(-50%,-50%);
+}
+.texto{
+
+  position:absolute;
+  top:10vh;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+
+
+#data{
+
+  height:20vh;
+  width:20vh;
+  
+  position:absolute;
+  top: 60%;
+  left:50%;
+  transform:translate(-50%,-50%);
+
+  border-radius:50%;
+
+  background-color:white;
+}
+
+#foto1{
+  width:50%;
+  height:30%;
+
+  position:absolute;
+  left:50%;
+  top:70%;
+  transform: translate(-50%,-50%);
+
+  border-radius: 10%;
+}
+
+#niver_motta{
+  display: none;
+}
+
+.feliz_aniversario{
+  position:absolute;
+  left:50%;
+  top:01%;
+  transform: translate(-50%,-50%);
+
+  white-space: nowrap;
+  text-align: center;
+  font-size: clamp(1rem, 5vh, 2.5rem);
+}
+
+.feliz_aniversariante{
+  
+  position:absolute;
+  left:50%;
+  top:15%;
+  transform: translate(-50%,-50%);
+
+  white-space: nowarp;
+  text-align:center;
+  font-size:clamp(1rem,2vh,2.5rem);
+}
+
+#k3{
+
+  position:absolute;
+  top:40%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  
+  
+}
+
+#relogiom{
+  position:absolute;
+  left:50%;
+  top:400px;
+  transform: translate(-50%,-50%);
+
+  white-space: nowrap;
+  text-align:flex;
+  
+}
+
+
+#foto2{
+  height:20%;
+  position:absolute;
+  left:50%;
+  top:70%;
+  transform: translate(-50%,-50%);
+
+  border-radius: 10%;
+}
