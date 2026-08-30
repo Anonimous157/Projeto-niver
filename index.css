@@ -1,5 +1,10 @@
+.caacupe-one-regular {
+  font-weight: 400;
+  font-style: normal;
+}
 
 body{
+  left:50%;
   opacity:90%;
   background-color:hwb(197 53% 8% / 0.8392156862745098);
   font-family: "Caacupe One", sans-serif;
@@ -119,22 +124,13 @@ html,body{
   white-space: nowrap;
 }
 
-/* ===== Container das fotos ===== */
-/* height aumentado de 800px pra 2200px pra caber tudo sem sobrepor.
-   Os % de top de cada filho abaixo foram recalculados em cima desse novo valor. */
-.fotos{
-  overflow: hidden;
-  position: relative;
-  height: 2200px;
-}
-
 #foto1{
   height: clamp(80px, 20vh, 200px);
   width: auto;
   position:absolute;
   transform: translate(-50%,-50%);
   border-radius: 10%;
-  top: 10%;
+  top:60%;
   left:50%;
 }
 
@@ -143,23 +139,28 @@ html,body{
   width: auto;
   position:absolute;
   left:50%;
-  top: 35%;
+  top:130%;
   transform: translate(-50%,-50%);
   border-radius: 10%;
 }
 
-.fotos_album2{
-  display: flex;
-  position:absolute;
-  top: 60%;
-  width:max-content;
-  animation: rodar 15s linear infinite;
+.fotos{
+  overflow: hidden;
+  height: 800px;
 }
 
 .fotos_album1{
   display: flex;
   position:absolute;
-  top: 85%;
+  top:230%;
+  width:max-content;
+  animation: rodar 15s linear infinite;
+}
+
+.fotos_album2{
+  display: flex;
+  position:absolute;
+  top:170%;
   width:max-content;
   animation: rodar 15s linear infinite;
 }
