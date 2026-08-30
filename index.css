@@ -22,7 +22,7 @@ html,body{
 .texto1{
   position:absolute;
   left:50%;
-  top:70%;
+  top:20%;
   transform:translate(-50%,-50%);
 }
 .texto{
@@ -55,8 +55,26 @@ html,body{
   transition:opacity 1s ease;
   display: none;
 }
+.glow-rosa {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  width: 300px;
+  height: 400px;
+  
+  background-color: #ff69b4;
+  border-radius: 50%;
+  
+  filter: blur(80px);
+  opacity: 0.7;
+  
+  z-index: -1;
+  pointer-events: none;
+}
 
-/* texto_principal: flex, empilha na ordem do HTML — sem top:% pra calcular errado */
+/* ===== texto_principal: flex, com "order" controlando a sequência visual ===== */
 .texto_principal{
   display: flex;
   flex-direction: column;
@@ -66,28 +84,37 @@ html,body{
   text-align: center;
 }
 
-.feliz_aniversario{
-  text-align: center;
-  font-size: clamp(1.3rem, 7vw, 2.5rem);
-}
-
-#relogiom{
-  font-size: clamp(0.85rem, 4vw, 1.3rem);
-}
-
 .feliz_aniversariante{
+  order: 1; /* era top:8% — o mais alto na tela */
   font-style: italic;
   text-align:center;
   font-size: clamp(1.2rem, 6vw, 2.2rem);
 }
 
+.linha-instagram{
+  order: 2; /* era top:18% */
+}
 .instagram i {
   color: #E1306C;
   font-size: clamp(1.5rem, 6vw, 2.5rem);
 }
 
+.feliz_aniversario{
+  order: 3; /* era top:30% */
+  text-align: center;
+  font-size: clamp(1.3rem, 7vw, 2.5rem);
+}
+
+.linha-contador{
+  order: 4; /* era top:70% */
+}
 #k3{
   font-size: clamp(1rem, 4.5vw, 1.6rem);
+}
+
+#relogiom{
+  order: 5; /* era top:80% — o mais embaixo */
+  font-size: clamp(0.85rem, 4vw, 1.3rem);
 }
 
 .confete-container {
@@ -115,7 +142,7 @@ html,body{
   100% { top: 110%; transform: translateX(20px) rotate(360deg); }
 }
 
-/* fotos: mesma lógica — flex, empilha sozinho, sem top:% */
+/* ===== .fotos: a ordem do HTML já era a ordem visual certa, não precisa de "order" ===== */
 .fotos{
   display: flex;
   flex-direction: column;
