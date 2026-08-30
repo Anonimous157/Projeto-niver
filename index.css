@@ -4,12 +4,10 @@
 }
 
 body{
-  left:50%;
   opacity:90%;
   background-color:hwb(195 25% 37% / 0.839);
   font-family: "Caacupe One", sans-serif;
   font-size: clamp(14px, 2vh, 2.5rem);
-
 }
 
 html,body{
@@ -43,7 +41,6 @@ html,body{
   transform:translate(-50%,-50%);
   border-radius:50%;
   background-color:white;
-
   text-align: center;
   font-size: 2vh;
 }
@@ -59,23 +56,38 @@ html,body{
   display: none;
 }
 
-.feliz_aniversario{
-  position:absolute;
-  left:50%;
-  top:30%;
-  transform: translate(-50%,-50%);
-  white-space: nowrap;
+/* texto_principal: flex, empilha na ordem do HTML — sem top:% pra calcular errado */
+.texto_principal{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 3rem 1rem 1rem;
   text-align: center;
-  font-size: clamp(1.1rem, 5.5vh, 2.5rem);
+}
+
+.feliz_aniversario{
+  text-align: center;
+  font-size: clamp(1.3rem, 7vw, 2.5rem);
+}
+
+#relogiom{
+  font-size: clamp(0.85rem, 4vw, 1.3rem);
+}
+
+.feliz_aniversariante{
+  font-style: italic;
+  text-align:center;
+  font-size: clamp(1.2rem, 6vw, 2.2rem);
 }
 
 .instagram i {
-  position:absolute;
-  top:18%;
-  left:50%;
-  transform:translate(-50%,-50%);
   color: #E1306C;
   font-size: clamp(1.5rem, 6vw, 2.5rem);
+}
+
+#k3{
+  font-size: clamp(1rem, 4.5vw, 1.6rem);
 }
 
 .confete-container {
@@ -103,116 +115,41 @@ html,body{
   100% { top: 110%; transform: translateX(20px) rotate(360deg); }
 }
 
-.feliz_aniversariante{
-  font-style: italic;
-  position:absolute;
-  top:8%;
-  left:50%;
-  transform: translate(-50%,-50%);
-  white-space: nowrap;
-  text-align:center;
-  font-size:clamp(2rem,2.2vh,2.7rem);
-}
-
-#k3{
-  position:absolute;
-  top:70%;
-  left:50%;
-  transform: translate(-50%,-50%);
-
-  font-size:3vh
-}
-
-#relogiom{
-  position:absolute;
-  left:50%;
-  top:80%;
-  transform: translate(-50%,-50%);
-  white-space: nowrap;
+/* fotos: mesma lógica — flex, empilha sozinho, sem top:% */
+.fotos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 3rem 1rem;
+  overflow: hidden;
 }
 
 #foto1{
   height: clamp(80px, 20vh, 200px);
   width: auto;
-  position:absolute;
-  transform: translate(-50%,-50%);
   border-radius: 10%;
-  top:60%;
-  left:50%;
 }
-
 
 #melhor_miga{
-  position: absolute;
-  top:98%;
-  left:50%;
-  transform:translate(-50%,-50%);
-
-}
-#foto2{
-  height: clamp(80px, 20vh, 200px);
-  width: auto;
-  position:absolute;
-  left:50%;
-  top:115%;
-  transform: translate(-50%,-50%);
-  border-radius: 10%;
-}
-
-.fotos{
-  overflow: hidden;
-  height: 800px;
-}
-
-
-
-.fotos_album1{
-
-  display: flex;
-  position:absolute;
-  top:135%;
-  width:max-content;
-  animation: rodar 15s linear infinite;
-}
-
-.fotos_Monas{
-  height: clamp(80px, 18vh, 180px);
-  width: auto;
-  flex-shrink: 0;
-  margin-right: 10px;
-  border-radius: 10%;
-}
-
-.texto_antes_grupo{
- 
-
-  max-width:100vh;
-  white-space: normal;
-  word-wrap:break-word;
-  font-size: 3vh;
-
- position:absolute;
- left: 50%;
- top: 200%;
- transform: translate(-50%, -50%);
- font-size: clamp(14px, 2vh, 2.5rem);
-
-  
-
-
-}
-#texto_grupo_ana{
+  font-size: clamp(1.2rem, 4vh, 2rem);
   text-align: center;
 }
 
+#foto2{
+  height: clamp(80px, 20vh, 200px);
+  width: auto;
+  border-radius: 10%;
+}
+
+.fotos_album1,
 .fotos_album2{
   display: flex;
-  position:absolute;
-  top:248%;
-  width:max-content;
+  width: max-content;
   animation: rodar 15s linear infinite;
 }
 
+.fotos_Monas,
 .fotos_grupo{
   height: clamp(80px, 18vh, 180px);
   width: auto;
@@ -221,24 +158,20 @@ html,body{
   border-radius: 10%;
 }
 
+.texto_antes_grupo,
 .texto_grupo{
-  
-  max-width:100vh;
+  max-width: min(60ch, 90vw);
   white-space: normal;
-  word-wrap:break-word;
-
- position:absolute;
- left: 50%;
- top: 305%;
- transform: translate(-50%, -50%);
- font-size: clamp(14px, 2vh, 2.5rem);
-
-}
-
-#texto_pos_grupo{
+  word-wrap: break-word;
+  font-size: clamp(14px, 2vh, 1.4rem);
+  line-height: 1.6;
   text-align: center;
 }
 
+#texto_grupo_ana,
+#texto_pos_grupo{
+  text-align: center;
+}
 
 @keyframes rodar {
   from{ transform: translateX(0); }
