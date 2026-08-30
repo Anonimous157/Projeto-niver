@@ -8,6 +8,7 @@ body{
   opacity:90%;
   background-color:hwb(197 53% 8% / 0.8392156862745098);
   font-family: "Caacupe One", sans-serif;
+  overflow:hidden;
 }
 
 html,body{
