@@ -11,8 +11,6 @@ body{
   overflow:hidden;
 }
 
-html,body{
-}
 
 #tela_data{
   transition:opacity 1s ease;
