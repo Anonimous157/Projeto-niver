@@ -4,11 +4,11 @@
 }
 
 body{
-  left:50%;
   opacity:90%;
   background-color:hwb(195 25% 37% / 0.839);
   font-family: "Caacupe One", sans-serif;
 }
+/* removi "left:50%" do body: sem "position" definido, essa linha não fazia nada */
 
 html,body{
   overflow-x: hidden;
@@ -41,7 +41,6 @@ html,body{
   transform:translate(-50%,-50%);
   border-radius:50%;
   background-color:white;
-
   text-align: center;
   font-size: 2vh;
 }
@@ -55,6 +54,12 @@ html,body{
   opacity:0;
   transition:opacity 1s ease;
   display: none;
+  position: relative;
+}
+
+.texto_principal{
+  position: relative;
+  min-height: 500px;
 }
 
 .feliz_aniversario{
@@ -117,8 +122,7 @@ html,body{
   top:70%;
   left:50%;
   transform: translate(-50%,-50%);
-
-  font-size:3vh
+  font-size:3vh;
 }
 
 #relogiom{
@@ -129,87 +133,48 @@ html,body{
   white-space: nowrap;
 }
 
+/* ============================================
+   A PARTIR DAQUI: seção .fotos reescrita
+   Antes: position:absolute + top:% (quebrava com texto de altura variável)
+   Agora: fluxo normal, tudo empilha sozinho, sem precisar calcular nada
+   ============================================ */
+
+.fotos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 3rem 1rem;
+  overflow: hidden; /* ainda necessário pra cortar o excesso horizontal do carrossel */
+}
+
 #foto1{
   height: clamp(80px, 20vh, 200px);
   width: auto;
-  position:absolute;
-  transform: translate(-50%,-50%);
   border-radius: 10%;
-  top:60%;
-  left:50%;
 }
 
-
-#melhor_miga{
-  position: absolute;
-  top:98%;
-  left:50%;
-  transform:translate(-50%,-50%);
-
-}
 #foto2{
   height: clamp(80px, 20vh, 200px);
   width: auto;
-  position:absolute;
-  left:50%;
-  top:115%;
-  transform: translate(-50%,-50%);
   border-radius: 10%;
 }
 
-.fotos{
-  overflow: hidden;
-  height: 800px;
-}
-
-
-
-.fotos_album1{
-
-  display: flex;
-  position:absolute;
-  top:135%;
-  width:max-content;
-  animation: rodar 15s linear infinite;
-}
-
-.fotos_Monas{
-  height: clamp(80px, 18vh, 180px);
-  width: auto;
-  flex-shrink: 0;
-  margin-right: 10px;
-  border-radius: 10%;
-}
-
-.texto_antes_grupo{
- 
-
-  max-width:50vh;
-  white-space: normal;
-  word-wrap:break-word;
-  font-size: 3vh;
-
- position:absolute;
- left: 50%;
- top: 200%;
- transform: translate(-50%, -50%);
-
-  
-
-
-}
-#texto_grupo_ana{
+#melhor_miga{
+  font-size: clamp(1.2rem, 4vh, 2rem);
   text-align: center;
 }
 
+/* Carrossel: o wrapper precisa ter largura total + overflow escondido,
+   e o "trilho" (fotos_album1/2) desliza dentro dele */
+.fotos_album1,
 .fotos_album2{
   display: flex;
-  position:absolute;
-  top:248%;
-  width:max-content;
+  width: max-content;
   animation: rodar 15s linear infinite;
 }
 
+.fotos_Monas,
 .fotos_grupo{
   height: clamp(80px, 18vh, 180px);
   width: auto;
@@ -218,26 +183,21 @@ html,body{
   border-radius: 10%;
 }
 
+.texto_antes_grupo,
 .texto_grupo{
-  
-  max-width:50vh;
+  max-width: min(50vh, 90vw);
   white-space: normal;
-  word-wrap:break-word;
+  word-wrap: break-word;
   font-size: 3vh;
-
- position:absolute;
- left: 50%;
- top: 305%;
- transform: translate(-50%, -50%);
-
+  text-align: center;
 }
 
+#texto_grupo_ana,
 #texto_pos_grupo{
   text-align: center;
 }
 
-
 @keyframes rodar {
   from{ transform: translateX(0); }
   to{ transform: translateX(-50%); }
-}
+  }
