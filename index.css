@@ -4,13 +4,14 @@
 }
 
 body{
-  left:50%;
   opacity:90%;
   background-color:hwb(197 53% 8% / 0.8392156862745098);
   font-family: "Caacupe One", sans-serif;
-  overflow:hidden;
 }
 
+html,body{
+  overflow-x: hidden;
+}
 
 #tela_data{
   transition:opacity 1s ease;
@@ -122,13 +123,22 @@ body{
   white-space: nowrap;
 }
 
+/* ===== Container das fotos ===== */
+/* height aumentado de 800px pra 2200px pra caber tudo sem sobrepor.
+   Os % de top de cada filho abaixo foram recalculados em cima desse novo valor. */
+.fotos{
+  overflow: hidden;
+  position: relative;
+  height: 2200px;
+}
+
 #foto1{
   height: clamp(80px, 20vh, 200px);
   width: auto;
   position:absolute;
   transform: translate(-50%,-50%);
   border-radius: 10%;
-  top:60%;
+  top: 10%;
   left:50%;
 }
 
@@ -137,28 +147,23 @@ body{
   width: auto;
   position:absolute;
   left:50%;
-  top:130%;
+  top: 35%;
   transform: translate(-50%,-50%);
   border-radius: 10%;
-}
-
-.fotos{
-  overflow: hidden;
-  height: 800px;
-}
-
-.fotos_album1{
-  display: flex;
-  position:absolute;
-  top:230%;
-  width:max-content;
-  animation: rodar 15s linear infinite;
 }
 
 .fotos_album2{
   display: flex;
   position:absolute;
-  top:170%;
+  top: 60%;
+  width:max-content;
+  animation: rodar 15s linear infinite;
+}
+
+.fotos_album1{
+  display: flex;
+  position:absolute;
+  top: 85%;
   width:max-content;
   animation: rodar 15s linear infinite;
 }
