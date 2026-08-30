@@ -8,6 +8,8 @@ body{
   opacity:90%;
   background-color:hwb(195 25% 37% / 0.839);
   font-family: "Caacupe One", sans-serif;
+    font-size: clamp(14px, 3vh, 2.5rem);
+
 }
 
 html,body{
@@ -193,6 +195,7 @@ html,body{
  left: 50%;
  top: 200%;
  transform: translate(-50%, -50%);
+ font-size: clamp(14px, 3vh, 2.5rem);
 
   
 
@@ -229,6 +232,7 @@ html,body{
  left: 50%;
  top: 305%;
  transform: translate(-50%, -50%);
+   font-size: clamp(14px, 3vh, 2.5rem);
 
 }
 
