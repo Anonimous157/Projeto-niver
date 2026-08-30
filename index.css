@@ -1,98 +1,149 @@
 .caacupe-one-regular {
-  font-family: "Caacupe One", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-
-
-body{
-  opacity:90%;
-  background-color:hwb(197 53% 8% / 0.8392156862745098);
+* {
+  box-sizing: border-box;
 }
 
-
-html,body{
+html, body {
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
 }
 
-#tela_data{
-  transition:opacity 1s easy;
-  display:block;
+body.corpo {
+  background-color: hwb(197 53% 8% / 0.84);
+  font-family: "Caacupe One", sans-serif;
+  min-height: 100vh;
 }
 
-.texto1{
-  position:absolute;
-  left:50%;
-  top:20%;
-  transform:translate(-50%,-50%);
-}
-.texto{
-
-  position:absolute;
-  top:10vh;
-  left:50%;
-  transform: translate(-50%,-50%);
-}
-
-
-#data{
-
-  height:20vh;
-  width:20vh;
-  
-  position:absolute;
-  top: 60%;
-  left:50%;
-  transform:translate(-50%,-50%);
-
-  border-radius:50%;
-
-  background-color:white;
+/* ===== Base de cada "tela" (data / aniversário) ===== */
+.tela {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  transition: opacity 1s ease;
 }
 
+/* ===== Tela inicial ===== */
+.texto1 h1 {
+  font-size: clamp(1.2rem, 5vw, 2rem);
+}
+
+#data {
+  height: clamp(120px, 20vh, 220px);
+  width: clamp(120px, 20vh, 220px);
+  border-radius: 50%;
+  border: none;
+  background-color: white;
+}
+
+.hh {
+  font-size: clamp(1rem, 4vw, 1.5rem);
+}
+
+/* ===== Tela de aniversário ===== */
+#niver_motta {
+  opacity: 0;
+  display: none;
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.feliz_aniversario {
+  font-size: clamp(1.5rem, 6vw, 3rem);
+  line-height: 1.3;
+}
+
+.feliz_aniversariante {
+  font-style: italic;
+  font-size: clamp(1.2rem, 5vw, 2.2rem);
+}
+
+#relogiom {
+  font-size: clamp(0.9rem, 3.5vw, 1.4rem);
+}
+
+#k3 {
+  font-size: clamp(1rem, 4vw, 1.6rem);
+}
+
+.instagram i {
+  font-size: clamp(1.5rem, 6vw, 2.5rem);
+  color: #E1306C;
+}
+
+/* Controlado via JS: opacity 0 -> 1 pra revelar aos poucos */
 .aparece {
   opacity: 0;
   transition: opacity 1s ease;
 }
 
-.niver_motta{
-  opacity:0;
-  transition:opacity 1s easy;
-  display: none;
+/* ===== Fotos soltas ===== */
+.fotos-soltas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
-.feliz_aniversario{
-  position:absolute;
-  left:50%;
-  top:30%;
-  transform: translate(-50%,-50%);
-
-  white-space: nowrap;
-  text-align: center;
-  font-size: clamp(1rem, 5vh, 2.5rem);
-  text-align:justify;
+.foto-solta {
+  height: clamp(120px, 22vh, 260px);
+  width: auto;
+  border-radius: 10%;
+  object-fit: cover;
 }
 
-.instagram i {
-  position:absolute;
-  top:16%;
-  left:70%;
-  transform:translate(-50%,-50%);
-  color: #E1306C;
-  
-  font-size:2rem;
+/* ===== Carrossel infinito ===== */
+.carrossel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
+.carrossel-trilho {
+  display: flex;
+  width: max-content;
+  animation: rodar 15s linear infinite;
+}
+
+.carrossel-img {
+  height: clamp(100px, 20vh, 200px);
+  width: auto;
+  margin-right: 10px;
+  border-radius: 10%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+@keyframes rodar {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ===== Confete ===== */
 .confete-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none; /* não atrapalha cliques na página */
+  pointer-events: none;
   overflow: hidden;
-  z-index: 999; /* fica por cima de tudo */
+  z-index: 999;
 }
 
 .confete {
@@ -105,108 +156,8 @@ html,body{
 }
 
 @keyframes cair {
-  0% {
-    top: -10%;
-    transform: translateX(0) rotate(0deg);
-  }
-  100% {
-    top: 110%;
-    transform: translateX(20px) rotate(360deg);
-  }
+  0% { top: -10%; transform: translateX(0) rotate(0deg); }
+  100% { top: 110%; transform: translateX(20px) rotate(360deg); }
 }
 
 
-
-
-.feliz_aniversariante{
-  font-style: italic;
-  
-  position:absolute;
-  top:15%;
-  left:45%;
-  transform: translate(-50%,-50%);
-
-  white-space: nowarp;
-  text-align:center;
-  font-size:clamp(1rem,2vh,2.5rem);
-}
-
-
-#k3{
-
-  position:absolute;
-  top:70%;
-  left:50%;
-  transform: translate(-50%,-50%);
-  
-  
-}
-
-#relogiom{
-  position:absolute;
-  left:50%;
-  top:80%;
-  transform: translate(-50%,-50%);
-
-  white-space: nowrap;
-  text-align:flex;
-  
-}
-
-
-
-
-
-
-#foto1{
-  height:20%;
-  width:30%;
-  position:absolute;
-  left:50%;
-  top:60%;
-  transform: translate(-50%,-50%);
-
-  border-radius: 10%;
-}
-
-#foto2{
-  height:20%;
-  position:absolute;
-  left:50%;
-  top:130%;
-  transform: translate(-50%,-50%);
-
-  border-radius: 10%;
-}
-
-
-
-
-
-.fotos{
-  overflow: hidden;
-}
-.fotos_album1{
-  display: flex;
-  position:absolute;
-  top:170%;
-  height:20%;
-
-  
-  width:max-content;
-  animation: rodar 15s linear infinite;
-}
-
-.fotos_grupo{
-  flex-shrink: 0;
-}
-
-@keyframes rodar {
-  from{
-    transform: translateX(0);
-  }
-  to{
-    transform: translateX(-50%);
-  }
-  
-}
