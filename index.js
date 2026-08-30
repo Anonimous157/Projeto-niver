@@ -5,8 +5,8 @@ let niver_motta=document.querySelector("#niver_motta");
 let body=document.querySelector(".corpo");
 let instagram=document.querySelector(".instagram");
 let relogio=document.querySelector("#relogiom")
-let quem_tá_de_niver=0
-//a var quem_tá_de_niver é usada para setar quem é o aniversariante, e servir como uma state machine
+let quem_ta_de_niver=0
+//a var quem_ta_de_niver e usada para setar quem e o aniversariante, e servir como uma state machine
 //=1 =>motta
 //=2 =>LEONARDO
 //=3 =>ARTHUR
@@ -16,7 +16,7 @@ let quem_tá_de_niver=0
 fate.addEventListener("change", () => {
   if (fate.value==="2026-09-01"){
     motta();
-    quem_tá_de_niver=1;
+    quem_ta_de_niver=1;
   }
   else{
     ff.textContent=fate.value;
