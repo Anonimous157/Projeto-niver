@@ -4,7 +4,8 @@ let tela_data=document.querySelector("#tela_data");
 let niver_motta=document.querySelector("#niver_motta");
 let body=document.querySelector(".corpo");
 let instagram=document.querySelector(".instagram");
-let relogio=document.querySelector("#relogiom")
+let relogio=document.querySelector("#relogiom");
+let musica=document.querySelector("#musica_motta");
 let quem_ta_de_niver=0
 //a var quem_ta_de_niver e usada para setar quem e o aniversariante, e servir como uma state machine
 //=1 =>motta
@@ -28,7 +29,7 @@ function motta() {
   ff.textContent="feliz aniversario motta";
   instagram.href="https://www.instagram.com/anallumotta_?igsi=amdtNnV4YW43Zzdx";
 
-  document.querySelector("#musica_motta").play();
+  musica.play();
 
   tela_data.style.opacity="0";
   tela_data.addEventListener("transitionend" , ()=>{
@@ -65,3 +66,11 @@ function atualizarRelogio() {
 }
 
 setInterval(atualizarRelogio, 1000);
+
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) {
+    musica.pause();
+  } else if (quem_ta_de_niver !== 0) {
+    musica.play();
+  }
+});
