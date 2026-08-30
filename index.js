@@ -25,7 +25,7 @@ fate.addEventListener("change", () => {
   }
 })
 function motta() {
-  body.style.backgroundColor="#FFD6E7";
+  body.style.backgroundColor="#ffd6e7df";
   ff.textContent="feliz aniversario motta";
   instagram.href="https://www.instagram.com/anallumotta_?igsi=amdtNnV4YW43Zzdx";
 
