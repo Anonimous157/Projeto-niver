@@ -6,7 +6,7 @@
 body{
   left:50%;
   opacity:90%;
-  background-color:hwb(197 53% 8% / 0.8392156862745098);
+  background-color:hwb(195 25% 37% / 0.839);
   font-family: "Caacupe One", sans-serif;
 }
 
@@ -41,6 +41,9 @@ html,body{
   transform:translate(-50%,-50%);
   border-radius:50%;
   background-color:white;
+
+  text-align: center;
+  font-size: 2vh;
 }
 
 .aparece {
@@ -61,13 +64,13 @@ html,body{
   transform: translate(-50%,-50%);
   white-space: nowrap;
   text-align: center;
-  font-size: clamp(1rem, 5vh, 2.5rem);
+  font-size: clamp(1.1rem, 5.5vh, 2.5rem);
 }
 
 .instagram i {
   position:absolute;
-  top:16%;
-  left:70%;
+  top:17%;
+  left:50%;
   transform:translate(-50%,-50%);
   color: #E1306C;
   font-size: clamp(1.5rem, 6vw, 2.5rem);
@@ -101,12 +104,12 @@ html,body{
 .feliz_aniversariante{
   font-style: italic;
   position:absolute;
-  top:15%;
-  left:45%;
+  top:8%;
+  left:50%;
   transform: translate(-50%,-50%);
   white-space: nowrap;
   text-align:center;
-  font-size:clamp(1rem,2vh,2.5rem);
+  font-size:clamp(2rem,2.2vh,2.7rem);
 }
 
 #k3{
@@ -114,6 +117,8 @@ html,body{
   top:70%;
   left:50%;
   transform: translate(-50%,-50%);
+
+  font-size:3vh
 }
 
 #relogiom{
@@ -134,12 +139,20 @@ html,body{
   left:50%;
 }
 
+
+#melhor_miga{
+  position: absolute;
+  top:98%;
+  left:50%;
+  transform:translate(-50%,-50%);
+
+}
 #foto2{
   height: clamp(80px, 20vh, 200px);
   width: auto;
   position:absolute;
   left:50%;
-  top:130%;
+  top:115%;
   transform: translate(-50%,-50%);
   border-radius: 10%;
 }
@@ -149,18 +162,50 @@ html,body{
   height: 800px;
 }
 
+
+
 .fotos_album1{
+
   display: flex;
   position:absolute;
-  top:230%;
+  top:135%;
   width:max-content;
   animation: rodar 15s linear infinite;
+}
+
+.fotos_Monas{
+  height: clamp(80px, 18vh, 180px);
+  width: auto;
+  flex-shrink: 0;
+  margin-right: 10px;
+  border-radius: 10%;
+}
+
+.texto_antes_grupo{
+ 
+
+  max-width:50vh;
+  white-space: normal;
+  word-wrap:break-word;
+  font-size: 3vh;
+
+ position:absolute;
+ left: 50%;
+ top: 200%;
+ transform: translate(-50%, -50%);
+
+  
+
+
+}
+#texto_grupo_ana{
+  text-align: center;
 }
 
 .fotos_album2{
   display: flex;
   position:absolute;
-  top:170%;
+  top:248%;
   width:max-content;
   animation: rodar 15s linear infinite;
 }
@@ -172,13 +217,25 @@ html,body{
   margin-right: 10px;
   border-radius: 10%;
 }
-.fotos_Monas{
-  height: clamp(80px, 18vh, 180px);
-  width: auto;
-  flex-shrink: 0;
-  margin-right: 10px;
-  border-radius: 10%;
+
+.texto_grupo{
+  
+  max-width:50vh;
+  white-space: normal;
+  word-wrap:break-word;
+  font-size: 3vh;
+
+ position:absolute;
+ left: 50%;
+ top: 305%;
+ transform: translate(-50%, -50%);
+
 }
+
+#texto_pos_grupo{
+  text-align: center;
+}
+
 
 @keyframes rodar {
   from{ transform: translateX(0); }
