@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/index.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,54 +9,33 @@
   <title>Niver teste</title>
 </head>
 <body class="corpo">
-
-  <section id="tela_data" class="tela">
+  
+  <section id="tela_data">
     <div class="texto1">
       <h1>Qual sua data de nascimento?</h1>
     </div>
     <input type="date" id="data">
-    <h1 class="hh"></h1>
+    <div>
+       <h1 class="hh"></h1>
+    </div>
   </section>
 
-  <section id="niver_motta" class="tela">
-    <div class="conteudo">
-      <h1 class="feliz_aniversario aparece">Feliz aniversário!<br>18 ANOS</h1>
-      <h1 class="feliz_aniversariante aparece">ANA LUIZA PEREIRA<br>MOTTA</h1>
-      <h2 id="relogiom" class="aparece"></h2>
-
-      <a href="https://www.instagram.com/anallumotta_?igsi=amdtNnV4YW43Zzdx" target="_blank" class="instagram aparece">
-        <i class="bi bi-instagram"></i>
-      </a>
-
-      <h3 id="k3" class="aparece">com a gente á</h3>
-    </div>
-
-    <div class="fotos-soltas">
-      <img src="./Pictures/Migas.jpg" class="foto-solta">
-      <img src="./Pictures/Motta_cascuda.jpg" class="foto-solta">
-    </div>
-
-    <div class="carrossel">
-      <div class="carrossel-trilho">
-        <img class="carrossel-img" src="./Pictures/Grupo.jpg">
-        <img class="carrossel-img" src="./Pictures/Sla.jpg">
-        <img class="carrossel-img" src="./Pictures/dois.jpg">
-        <img class="carrossel-img" src="./Pictures/Grupo.jpg">
-        <img class="carrossel-img" src="./Pictures/Sla.jpg">
-        <img class="carrossel-img" src="./Pictures/dois.jpg">
+  <section id="niver_motta" class="aparecer">
+    <div class="texto_principal aparece">
+      <h1 class="feliz_aniversario aparece">Feliz aniversário!<br><br><center>18 ANOS</center></h1>
+      <h1 id="relogiom"></h1>
+      <h1 class="feliz_aniversariante aparece">
+        ANA LUIZA PEREIRA <br>MOTTA
+      </h1>
+      <div>
+        <a href="#" class="instagram">
+          <i class="bi bi-instagram"></i>
+        </a>
       </div>
-    </div>
-
-    <div class="carrossel">
-      <div class="carrossel-trilho">
-        <img class="carrossel-img" src="./Pictures/Monas1.jpg">
-        <img class="carrossel-img" src="./Pictures/Monas2.jpg">
-        <img class="carrossel-img" src="./Pictures/Monas3.jpg">
-        <img class="carrossel-img" src="./Pictures/Monas4.jpg">
-        <img class="carrossel-img" src="./Pictures/Monas1.jpg">
-        <img class="carrossel-img" src="./Pictures/Monas2.jpg">
-        <img class="carrossel-img" src="./Pictures/Monas3.jpg">
-        <img class="carrossel-img" src="./Pictures/Monas4.jpg">
+      <div>
+        <p class="texto"></p>
+        <p class="texto"></p>
+        <h3 id="k3">com a gente <br><center>á</center></h3>
       </div>
     </div>
 
@@ -72,8 +49,32 @@
       <div class="confete" style="left: 70%; animation-delay: 0.8s; background: #4ecdc4;"></div>
       <div class="confete" style="left: 85%; animation-delay: 1.3s; background: #ffe66d;"></div>
     </div>
-  </section>
 
+    <div class="fotos">
+      <img src="./Pictures/Migas.jpg" id="foto2">
+      <img src="./Pictures/Motta_cascuda.jpg" id="foto1">
+
+      <div class="fotos_album1">
+        <img class="fotos_grupo" src="./Pictures/Grupo.jpg">
+        <img class="fotos_grupo" src="./Pictures/Sla.jpg">
+        <img class="fotos_grupo" src="./Pictures/dois.jpg">
+        <img class="fotos_grupo" src="./Pictures/Grupo.jpg">
+        <img class="fotos_grupo" src="./Pictures/Sla.jpg">
+        <img class="fotos_grupo" src="./Pictures/dois.jpg">
+      </div>
+
+      <div class="fotos_album2">
+        <img class="fotos_Monas" src="./Pictures/Monas1.jpg">
+        <img class="fotos_Monas" src="./Pictures/Monas2.jpg">
+        <img class="fotos_Monas" src="./Pictures/Monas3.jpg">
+        <img class="fotos_Monas" src="./Pictures/Monas4.jpg">
+        <img class="fotos_Monas" src="./Pictures/Monas1.jpg">
+        <img class="fotos_Monas" src="./Pictures/Monas2.jpg">
+        <img class="fotos_Monas" src="./Pictures/Monas3.jpg">
+        <img class="fotos_Monas" src="./Pictures/Monas4.jpg">
+      </div>
+    </div>
+  </section>
   <script src="js/index.js"></script>
 </body>
 </html>
