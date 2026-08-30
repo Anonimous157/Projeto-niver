@@ -8,7 +8,7 @@ body{
   opacity:90%;
   background-color:hwb(195 25% 37% / 0.839);
   font-family: "Caacupe One", sans-serif;
-    font-size: clamp(14px, 2vh, 2.5rem);
+  font-size: clamp(14px, 2vh, 2.5rem);
 
 }
 
