@@ -14,7 +14,7 @@ let quem_ta_de_niver=0
 //=5 =>LUCAS//
 
 fate.addEventListener("change", () => {
-  if (fate.value==="2026-09-01"){
+  if (fate.value==="2008-09-01"){
     motta();
     quem_ta_de_niver=1;
   }
