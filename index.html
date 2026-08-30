@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/index.css">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caacupe+One&display=swap" rel="stylesheet">
@@ -10,71 +11,69 @@
   <title>Niver teste</title>
 </head>
 <body class="corpo">
-  
-  <section id="tela_data">
+
+  <section id="tela_data" class="tela">
     <div class="texto1">
       <h1>Qual sua data de nascimento?</h1>
     </div>
     <input type="date" id="data">
-    <div>
-      <!--o id-foto1. que é o do grupo. dá pra botar na primeira pagina. 
-      dai pergunta
-      quem voce é do grupo?
-      pq ela ta muito feia kkkkk-->
-       <h1 class="hh"></h1>
-    </div>
+    <h1 class="hh"></h1>
   </section>
 
-  
-  <section class="niver_motta aparecr">
-    <div class="texto_principal aparece">
-      <h1 class="feliz_aniversario aparece">Feliz aniversário!<br><br><center>18 ANOS</center></h1>
-      
-      <h1 id="relogiom"></h1>
-      <h1 class="feliz_aniversariante aparece">
-        ANA LUIZA PEREIRA <br>MOTTA
-            </h1>
-      <div>
-      <a href="https://www.instagram.com/anallumotta_?igsi=amdtNnV4YW43Zzdx" class="instagram">
-        <i class="bi bi-instagram" target="_blanck"></i>
+  <section id="niver_motta" class="tela">
+    <div class="conteudo">
+      <h1 class="feliz_aniversario aparece">Feliz aniversário!<br>18 ANOS</h1>
+      <h1 class="feliz_aniversariante aparece">ANA LUIZA PEREIRA<br>MOTTA</h1>
+      <h2 id="relogiom" class="aparece"></h2>
+
+      <a href="https://www.instagram.com/anallumotta_?igsi=amdtNnV4YW43Zzdx" target="_blank" class="instagram aparece">
+        <i class="bi bi-instagram"></i>
       </a>
-        
+
+      <h3 id="k3" class="aparece">com a gente á</h3>
+    </div>
+
+    <div class="fotos-soltas">
+      <img src="./Pictures/Migas.jpg" class="foto-solta">
+      <img src="./Pictures/Motta_cascuda.jpg" class="foto-solta">
+    </div>
+
+    <div class="carrossel">
+      <div class="carrossel-trilho">
+        <img class="carrossel-img" src="./Pictures/Grupo.jpg">
+        <img class="carrossel-img" src="./Pictures/Sla.jpg">
+        <img class="carrossel-img" src="./Pictures/dois.jpg">
+        <img class="carrossel-img" src="./Pictures/Grupo.jpg">
+        <img class="carrossel-img" src="./Pictures/Sla.jpg">
+        <img class="carrossel-img" src="./Pictures/dois.jpg">
       </div>
-          <div>
-      <p class="texto"></p>
-      <p class="texto"></p>
-      <h3 id="k3">voce chegou á</h3>
-            
-          </div>
     </div>
-      
 
-      <audio src="./Pictures/2h30.mp3" id="musica_motta" loop></audio>
-    
+    <div class="carrossel">
+      <div class="carrossel-trilho">
+        <img class="carrossel-img" src="./Pictures/Monas1.jpg">
+        <img class="carrossel-img" src="./Pictures/Monas2.jpg">
+        <img class="carrossel-img" src="./Pictures/Monas3.jpg">
+        <img class="carrossel-img" src="./Pictures/Monas4.jpg">
+        <img class="carrossel-img" src="./Pictures/Monas1.jpg">
+        <img class="carrossel-img" src="./Pictures/Monas2.jpg">
+        <img class="carrossel-img" src="./Pictures/Monas3.jpg">
+        <img class="carrossel-img" src="./Pictures/Monas4.jpg">
+      </div>
+    </div>
+
+    <audio src="./Musicas/2h30.mp3" id="musica_motta" loop></audio>
+
     <div class="confete-container">
-  <div class="confete" style="left: 10%; animation-delay: 0s; background: #ff6b6b;"></div>
-  <div class="confete" style="left: 25%; animation-delay: 0.5s; background: #4ecdc4;"></div>
-  <div class="confete" style="left: 40%; animation-delay: 1s; background: #ffe66d;"></div>
-  <div class="confete" style="left: 55%; animation-delay: 0.3s; background: #ff6b6b;"></div>
-  <div class="confete" style="left: 70%; animation-delay: 0.8s; background: #4ecdc4;"></div>
-  <div class="confete" style="left: 85%; animation-delay: 1.3s; background: #ffe66d;"></div>
+      <div class="confete" style="left: 10%; animation-delay: 0s; background: #ff6b6b;"></div>
+      <div class="confete" style="left: 25%; animation-delay: 0.5s; background: #4ecdc4;"></div>
+      <div class="confete" style="left: 40%; animation-delay: 1s; background: #ffe66d;"></div>
+      <div class="confete" style="left: 55%; animation-delay: 0.3s; background: #ff6b6b;"></div>
+      <div class="confete" style="left: 70%; animation-delay: 0.8s; background: #4ecdc4;"></div>
+      <div class="confete" style="left: 85%; animation-delay: 1.3s; background: #ffe66d;"></div>
     </div>
-
-  <div class="fotos">
-    <img src="./Pictures/Migas.jpg" id="foto2">
-    <img src="./Pictures/Motta_cascuda.jpg" id="foto1">
-    <div class="fotos_album1">
-      <img class="fotos_grupo" id="foto3" src="./Pictures/Grupo.jpg">
-      <img class="fotos_grupo" id="foto4" src="./Pictures/Sla.jpg">
-      <img class="fotos_grupo" id="foto5" src="./Pictures/dois.jpg">
-      <img class="fotos_grupo" id="foto3" src="./Pictures/Grupo.jpg">
-      <img class="fotos_grupo" id="foto4" src="./Pictures/Sla.jpg">
-      <img class="fotos_grupo" id="foto5" src="./Pictures/dois.jpg">
-    </div>
-  </div>
-
-    
   </section>
+
   <script src="js/index.js"></script>
 </body>
 </html>
