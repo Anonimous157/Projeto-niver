@@ -16,8 +16,8 @@ let quem_ta_de_niver=0
 //=5 =>LUCAS//
 
 let musicas = [
-  "./Musicas/2h30.mp3",
   "./Musicas/Pabllo_parabens.mp3",
+  "./Musicas/MTG PRA FICAR LEGAL.mp3"
 ];
 let musicaAtual = 0;
 
