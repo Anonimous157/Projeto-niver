@@ -6,6 +6,7 @@ let body=document.querySelector(".corpo");
 let instagram=document.querySelector(".instagram");
 let relogio=document.querySelector("#relogiom");
 let musica=document.querySelector("#musica_motta");
+let botaoMusica=document.querySelector("#botao_music");
 let quem_ta_de_niver=0
 //a var quem_ta_de_niver e usada para setar quem e o aniversariante, e servir como uma state machine
 //=1 =>motta
@@ -13,6 +14,12 @@ let quem_ta_de_niver=0
 //=3 =>ARTHUR
 //=4 =>AMABILY
 //=5 =>LUCAS//
+
+let musicas = [
+  "./Musicas/2h30.mp3",
+  "./Musicas/Pabllo_parabens.mp3",
+];
+let musicaAtual = 0;
 
 fate.addEventListener("change", () => {
   if (fate.value==="2008-09-01"){
@@ -50,6 +57,13 @@ function revelarAosPoucos() {
     }, index * 500);
   });
 }
+
+botaoMusica.addEventListener("click", () => {
+  musicaAtual = (musicaAtual + 1) % musicas.length;
+  musica.src = musicas[musicaAtual];
+  musica.load();
+  musica.play();
+});
 
 let data_chegada_motta= new Date("2026-06-01T00:00:00");
 
