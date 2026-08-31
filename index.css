@@ -14,6 +14,17 @@ html,body{
   overflow-x: hidden;
 }
 
+#botao_music{
+  position:fixed;
+  left:85%;
+  width:13%;
+  height:5%;
+
+  z-index: 99;
+
+  background: none;
+}
+
 #tela_data{
   transition:opacity 1s ease;
   display:block;
