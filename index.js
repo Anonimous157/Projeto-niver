@@ -26,9 +26,7 @@ fate.addEventListener("change", () => {
     motta();
     quem_ta_de_niver=1;
   }
-  else{
-    ff.textContent=fate.value;
-  }
+  
 })
 
 function motta() {
