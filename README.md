@@ -9,3 +9,4 @@ por enquanto, tô fazendo mas no objetivo de melhorar na programação.
 
 
 Data de início Seção Ana:27/08/2026
+Ana:01/09/2008
